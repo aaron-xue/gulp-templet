@@ -74,6 +74,14 @@ function dev() {
             stream: true
         }));
     });
+    /**
+     * 字体处理
+     */
+    gulp.task('font:dev', function () {
+        return gulp.src(Config.font.src).pipe(gulp.dest(Config.font.dist)).pipe(reload({
+            stream: true
+        }));
+    });
     var middleware = proxyMiddleware('/api', {
         target: 'http://47.92.94.122:8080',
         // changeOrigin: true,
@@ -104,7 +112,7 @@ function dev() {
         gulp.watch(Config.img.src, ['images:dev']);
     });
     gulp.task('dev', function (cb) {
-        return runSequence(['css:dev', 'sass:dev', 'js:dev', 'assets:dev', 'images:dev'],['html:dev'],'watch', cb)
+        return runSequence(['css:dev', 'sass:dev', 'js:dev', 'assets:dev', 'images:dev','font:dev'],['html:dev'],'watch', cb)
     });
 }
 //======= gulp dev 开发环境下 ===============

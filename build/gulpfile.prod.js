@@ -78,9 +78,17 @@ function prod() {
             , interlaced: true
         })).pipe(gulp.dest(Config.img.dist));
     });
+    /**
+     * 字体处理
+     */
+    gulp.task('font:dev', function () {
+        return gulp.src(Config.font.src).pipe(gulp.dest(Config.font.dist)).pipe(reload({
+            stream: true
+        }));
+    });
     
     gulp.task('build', function (cb) {
-        return runSequence(['css', 'sass', 'js', 'assets', 'images'],['html'],cb)
+        return runSequence(['css', 'sass', 'js', 'assets', 'images','font:dev'],['html'],cb)
     });
 }
 module.exports = prod;

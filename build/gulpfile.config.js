@@ -30,6 +30,10 @@ var Config = {
     img: {  
         src: SRC_DIR + 'images/**/*',            // images目录：./src/images/  
         dist: DIST_DIR + 'images'                // images文件build后存放的目录：./dist/images  
+    },
+    font:{
+        src: SRC_DIR + 'fonts/**/*',            // fonts目录：./src/fonts/  
+        dist: DIST_DIR + 'fonts'                // fonts文件build后存放的目录：./dist/fonts  
     }  
 };
 
