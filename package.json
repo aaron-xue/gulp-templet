@@ -1,0 +1,32 @@
+{
+  "name": "gulp-templet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run dev",
+    "dev": "npm run clean && gulp dev",
+    "clean": "rimraf dist",
+    "build": "rimraf dist && gulp build"
+  },
+  "author": "aaron-xue",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-inject": "^4.3.2",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "http-proxy-middleware": "^0.19.0",
+    "jshint": "^2.9.6",
+    "run-sequence": "^2.2.1"
+  }
+}
