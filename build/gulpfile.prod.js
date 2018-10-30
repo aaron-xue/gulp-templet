@@ -37,7 +37,7 @@ function prod() {
      * CSS样式处理 
      */
     gulp.task('css', function () {
-        return gulp.src(Config.css.src).pipe(autoprefixer('last 2 version')).pipe(gulp.dest(Config.css.dist)).pipe(rename({
+        return gulp.src(Config.css.src).pipe(autoprefixer('last 2 version')).pipe(rename({
                 suffix: '.min'
             })).pipe(cssnano()) //执行压缩  
             .pipe(gulp.dest(Config.css.dist));
@@ -46,7 +46,7 @@ function prod() {
      * SASS样式处理 
      */
     gulp.task('sass', function () {
-        return gulp.src(Config.sass.src).pipe(autoprefixer('last 2 version')).pipe(sass()).pipe(gulp.dest(Config.sass.dist)).pipe(rename({
+        return gulp.src(Config.sass.src).pipe(autoprefixer('last 2 version')).pipe(sass()).pipe(rename({
                 suffix: '.min'
             })) //rename压缩后的文件名  
             .pipe(cssnano()) //执行压缩  
@@ -56,7 +56,7 @@ function prod() {
      * js处理 
      */
     gulp.task('js', function () {
-        return gulp.src(Config.js.src).pipe(jshint('.jshintrc')).pipe(jshint.reporter('default')).pipe(gulp.dest(Config.js.dist)).pipe(rename({
+        return gulp.src(Config.js.src).pipe(jshint('.jshintrc')).pipe(jshint.reporter('default')).pipe(rename({
             suffix: '.min'
         })).pipe(uglify()).pipe(gulp.dest(Config.js.dist));
     });
