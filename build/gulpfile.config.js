@@ -7,7 +7,7 @@ var Config = {
     dist: DIST_DIR,
     dist_files: DIST_FILES,
     html: {  
-        src: SRC_DIR + '*.html',  
+        src: SRC_DIR + '**/*.html',  
         dist: DIST_DIR  
     },  
     assets: {  
